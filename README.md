@@ -19,15 +19,30 @@ finishing point after the moves e.g. 2:1:N
 ## UnitTests
 Run `python test.py`
 
-### Usage
+### Usage local
 Run `python main.py`
 
 HTTP GET to see grid and Rover postition:
 ```
-curl --request POST --data '{"command":"mmm"}' http://localhost:8081/ 
+curl --request GET http://localhost:8081/ 
 ```
 
 HTTP POST to send some commands to the Rover
 ```
-curl --header "Content-Type: application/json" --request POST --data '{"command":"MMMMM"}' http://localhost:8081/
+curl --header "Content-Type: application/json" --request POST --data '{"command":"RMMLM"}' http://localhost:8081/
 ``` 
+
+### Working example heroku
+HTTP GET to see grid and Rover postition:
+```
+curl --request GET https://enigmatic-earth-39784.herokuapp.com/
+ 
+```
+
+HTTP POST to send some commands to the Rover
+```
+curl --header "Content-Type: application/json" --request POST --data '{"command":"RMMLM"}' https://enigmatic-earth-39784.herokuapp.com/
+``` 
+
+
+
