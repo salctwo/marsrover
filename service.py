@@ -8,13 +8,13 @@ def step(x,y, car):
     return ( (cx+x) % 10, (cy+y) % 10, cd)
 
 def move_n(car):
-    return step(-1,0,car)
+    return step(0, -1, car)
 def move_s(car):
-    return step(1,0,car)
+    return step(0, 1, car)
 def move_e(car):
-    return step(0,1,car)
+    return step(1, 0, car)
 def move_w(car):
-    return step(0,-1,car)
+    return step(-1, 0, car)
 
 
 
